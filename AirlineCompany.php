@@ -7,6 +7,7 @@
     require_once 'assets/navbar.php';
     require_once 'db_connection/db_connection.php';
 
+    
     if(isset($_GET['flight_id']))
     {
         $id = $_GET['flight_id'];
