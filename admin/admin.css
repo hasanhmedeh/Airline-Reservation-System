@@ -1,0 +1,137 @@
+.admin_container{
+    display: flex;
+}
+
+
+.admin_details_container{
+    flex: 1;
+    padding: 2%
+}
+
+
+/* menu admin panel */
+.admin_layout_container{
+    flex: 0.2;
+    padding: 1%;
+    min-height: 90vh;
+}
+
+.admin_layout_title{
+    font-size: 100%;
+    font-variant: small-caps;
+    color: lightgray;
+}
+
+
+/* menu item */
+.admin_menuItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 8%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.admin_menuItem:hover{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+
+.admin_menuItem div{
+    display: flex;
+    align-items: center;
+}
+
+.admin_menuItem h4{
+    margin-left: 10px;
+    font-size: 100%;
+}
+
+/* logout */
+.logout{
+    padding: 4% 8%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 100%;
+    color: rgb(192, 192, 192);
+    background-color: rgb(83, 83, 83);
+}
+
+.logout:hover{
+    background-color: rgb(170, 170, 170);
+    background-color: grey;
+    color: white;
+}
+
+.active_menu{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* dashboard */
+
+/* stat card */
+.stat_card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 2% 4%;
+    width: 30%;
+    border-left: 4px solid;
+    box-shadow: 1px 1px 4px lightgray;
+    margin: 1%;
+    border-radius: 2px;
+    text-align: center;
+}
+
+
+/* admin details table */
+.admin_table, .admin_table th, .admin_table td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+.admin_table tr:hover{
+    background-color: rgb(238, 236, 236);
+}
+
+.admin_table thead th {
+    color: #2196F3;
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.admin_table tr:nth-child(even){
+    background-color: rgb(238, 236, 236);
+}
+
+/* admin details */
+.details_title{
+    font-size: 250%;
+    margin: 2% auto 4% auto;
+}
+
+.admin_input_field{
+    padding: 2%;
+    width: 90%;
+    outline: none;
+    border: 1px solid lightgray;
+    color: grey
+}
+
+.admin_input_label{
+    display: block;
+    font-size: 80%;
+    
+}

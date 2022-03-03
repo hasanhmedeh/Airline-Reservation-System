@@ -1,0 +1,173 @@
+.login_page{
+    background-image: url(../images/map.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    caret-color: #31a3d6;
+}
+
+.login-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    transition: .2s ease-in-out;
+}
+
+.welcome i{
+    font-size: 10em;
+    color: rgb(46, 157, 226);
+    text-align: center;
+    filter: drop-shadow(15px 15px 4px rgb(0 0 0 / 0.4));
+}
+
+.welcome p{
+    color: #aaa;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: rgba(131, 131, 131, 0.425);
+    box-shadow: 5px 5px 10px #000;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    font-family: sans-serif;
+}
+
+.login-container form label{
+    color: white;
+    margin:7px 0;
+    font-size: 1.2em;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.login-container form p a:hover{
+    color: #ccc;
+}
+
+.inputIcon{
+    position: absolute;
+    left: 30px;
+    line-height: 40px;
+    font-size: 1em;
+    color: #71bbf1;
+}
+
+.login-container form input{
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;    
+    transition: .3s ease-in-out;
+    border: none;
+}
+
+.login-container form input[type=text], .login-container form input[type=password], .login-container form input[type=email]{
+    color: black;
+    background-color: white;
+    padding: 10px 0 10px 35px;
+    height: 30px;
+}
+
+.login-container form input[type=submit]{
+    background-color: #2862a1;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    
+}
+
+.login-container form input[type=submit]:hover{
+    background-color: rgb(49,163,214);
+}
+
+.login-container form p{
+    color: white;
+    font-size: .9em;
+    text-align: center;
+}
+
+.login-container form p a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: .2s ease-in-out;
+}
+
+.sign-up{
+    width: 30vw;
+}
+
+.sign-up form label{
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.sign-up form input{
+    margin: 0 0 10px 0;
+}
+
+.sign-up form input[type=text], .sign-up form input[type=password], .sign-up form input[type=email]{
+    padding-left: 10px;
+}
+
+.sign-up form input[type=submit]{
+    margin-top: 20px;
+}
+
+.attention{
+    border-left: 3px solid #f85449;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #ffefef;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black !important;
+    font-size: 1em;
+    width: 230px;
+}
+
+@media (max-width: 1250px){
+    .login_page{
+        background-size: inherit;
+    }
+
+    .login-container{
+        flex-direction: column-reverse;
+    }
+    
+    .welcome{
+        display: none;
+    }
+
+    .sign-up{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 840px){
+    .login-container{
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .login-container form p{
+        font-size: .8em;
+        text-align: center;
+    }
+
+    .sign-up{
+        width: 60vw;
+    }
+}
