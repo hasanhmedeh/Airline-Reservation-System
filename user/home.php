@@ -133,7 +133,8 @@
                <p><?php 
                   echo "Flight Name: " . $flights['flight_name'].'</br>'.
                         "From: " . $flights['from_location'].'</br>'.
-                        "To: " . $flights['to_location'];
+                        "To: " . $flights['to_location'].'</br>'.
+                        "Seats Left: ". $flights['total_seats'];
                ?></p>
                <?php 
                   for($j=0; $j<$flights['rate']; $j++){
@@ -142,7 +143,7 @@
                 ?>
                <br>
                <!-- Button trigger modal -->
-               <button type="button" class="btn" data-toggle="modal" data-target="<?php echo "#book" . $flights['flight_id'] ?>">
+               <button <?php if($flights['total_seats'] == 0) echo 'disabled style="cursor: not-allowed"'; ?> type="button" class="btn" data-toggle="modal" data-target="<?php echo "#book" . $flights['flight_id'] ?>">
                book now
                </button>
 
@@ -156,11 +157,22 @@
                            <span aria-hidden="true" style="font-size: 2em;">&times;</span>
                         </button>
                         </div>
-                        <form method="POST" action="reserve.php" id = "<?php echo "reserve". $flights['flight_id'] ?>">
-                           <input type="number" min="1" max="<?php echo $flights['total_seats'] ?>" placeholder="number of seats" class="nbSeats_input" />
+                        <form method="POST" action="reserve.php?flight_id=<?php 
+                           echo $flights['flight_id'];?>&totalSeats=<?php echo $flights['total_seats'];?>
+                           &airline_id=<?php echo $flights['airline_id'] ?>
+                           &price=<?php echo $flights['flight_price'] ?>" id = "<?php echo "reserve". $flights['flight_id'] ?>">
+                           <input type="number" name="seatsNum" min="1" max="<?php echo $flights['total_seats'] ?>" placeholder="number of seats" class="nbSeats_input" required/>
+                           
+                           <select class="nbSeats_input" name="class" required>
+                              <option value="business" selected>Choose a course for feedback:</option>
+                              <option value="business" >Business Class</option>
+                              <option value="economic" >Economic Class (+150$)</option>
+                              <option value="firstClass" >First Class (+300$)</option>
+                           </select>
+
                         </form>
                         <!-- option business or econ -->
-                        <p>Price/ticket: 50 (business: +30$)</p>
+                        <p>Price/ticket: <?php echo $flights['flight_price'] ?>$ </br> (Economic: +150$)</br>(First Class: +300$)</p>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button 
@@ -168,7 +180,7 @@
                            type="submit"
                            name="reserve"
                            class="btn btn-primary"
-                        >Save changes</button>
+                        >Buy Tickets</button>
                         </div>
                      </div>
                   </div>

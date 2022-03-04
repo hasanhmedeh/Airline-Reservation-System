@@ -32,6 +32,7 @@
                 header("Location: AirlineCompany.php");
             } else if($user['role']=='client'){
                 $_SESSION['username'] = $user['passenger_username'];
+                $_SESSION['credit_number'] = $user['credit_number'];
                 $_SESSION['role'] = "client";
                 header("Location: user/home.php");
             } else if($user['role']=='admin'){
