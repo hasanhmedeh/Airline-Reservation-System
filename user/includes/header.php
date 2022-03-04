@@ -39,10 +39,10 @@
    <a href="home.php" class="logo">We Go <i class="fas fa-plane"></i></a>
 
    <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
+      <a href="home.php">HOME</a>
+      <a href="package.php">PACKAGE</a>
+      <a href="contact_us.php">CONTACT US</a>
+      <a href="about.php">ABOUT</a>
       <a href="profile.php"><i class="fa-solid fa-user" style="padding: 10px 11px; border: 2px solid black; border-radius: 50%;"></i></a>
    </nav>
 
