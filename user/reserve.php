@@ -21,7 +21,8 @@
         
         $getCreditCard="SELECT * FROM airlineCompany WHERE airline_id = $airlineId";
         $result = odbc_exec($conn, $getCreditCard);
-        $creditCardNumber = odbc_fetch_array($result)['credit_number'];
+        $comapny = odbc_fetch_array($result);
+        $creditCardNumber = $comapny['credit_number'];
 
         $getUserCreditCard="SELECT * FROM passenger WHERE passenger_username = '$user'";
         $result = odbc_exec($conn, $getUserCreditCard);
@@ -43,8 +44,17 @@
             }
         }
         
-        if (isset($_SERVER["HTTP_REFERER"])) {
-            header("Location: " . $_SERVER["HTTP_REFERER"]);
-        }
+        // if (isset($_SERVER["HTTP_REFERER"])) {
+        //     header("Location: " . $_SERVER["HTTP_REFERER"]);
+        // }
+
+        $flightQ="SELECT * FROM flight WHERE flight_id = $flight_id";
+        $result = odbc_exec($conn, $flightQ);
+        $flight = odbc_fetch_array($result);
+
+        $newPage = "ticket.php?Airline=".$comapny['airline_name']."&from=".$flight['from_location']."&to=".$flight['to_location']
+        ."&fromSeat=$totalSeats&toSeat=$numOfSeats&time=".$flight['departure_time'];
+
+        header("Location: $newPage");
     }
 ?>

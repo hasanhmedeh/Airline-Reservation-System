@@ -62,8 +62,10 @@
         
       </div>
 
-      <input type="submit" value="Edit Information" class="btn" name="edit">
-
+      <div style="display: flex; flex-direction: row; gap:20px">
+         <input onclick="history.back()" type="button" value="Cancel" class="btn" name="cancel">
+         <input type="submit" value="Edit Information" class="btn" name="edit">
+      </div>
    </form>
 
 </section>

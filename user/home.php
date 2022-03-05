@@ -164,7 +164,7 @@
                            <input type="number" name="seatsNum" min="1" max="<?php echo $flights['total_seats'] ?>" placeholder="number of seats" class="nbSeats_input" required/>
                            
                            <select class="nbSeats_input" name="class" required>
-                              <option value="business" selected>Choose a course for feedback:</option>
+                              <option value="business" selected>Choose your flight Class</option>
                               <option value="business" >Business Class</option>
                               <option value="economic" >Economic Class (+150$)</option>
                               <option value="firstClass" >First Class (+300$)</option>
@@ -203,7 +203,7 @@
    <div class="content">
       <h3>upto 50% off</h3>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure tempora assumenda, debitis aliquid nesciunt maiores quas! Magni cumque quaerat saepe!</p>
-      <a href="book.php" class="btn">book now</a>
+      <a href="package.php" class="btn">book now</a>
    </div>
 </section>
 

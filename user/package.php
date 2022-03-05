@@ -64,7 +64,7 @@
                            <input type="number" name="seatsNum" min="1" max="<?php echo $flights['total_seats'] ?>" placeholder="number of seats" class="nbSeats_input" required/>
                            
                            <select class="nbSeats_input" name="class" required>
-                              <option value="business" selected>Choose a course for feedback:</option>
+                              <option value="business" selected>Choose your flight Class</option>
                               <option value="business" >Business Class</option>
                               <option value="economic" >Economic Class (+150$)</option>
                               <option value="firstClass" >First Class (+300$)</option>
