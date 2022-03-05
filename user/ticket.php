@@ -12,11 +12,13 @@
         $toSeat = $_GET['toSeat']+$fromSeat;
         $time = $_GET['time'];
         $onlyOnce = 0;
+    } else {
+        header("Location: home.php");
     }
     
 ?>
 
-<a href="home.php" class="doneFromTicket"><button>Done</button></a>
+<span class="doneFromTicket" onclick="history.back()"><button>Done</button></span>
 
 <div style="text-align: center; font-size: 2.5em; margin-top: 20px;"><h1>Print this ticket for future use</h1></div>
 
@@ -24,12 +26,12 @@
     <div class="card cardLeft">
         <h1><?php echo $airlineName; ?> <span>AirLine</span></h1>
         <div class="title">
-            <h2><?php echo $from; ?></h2>
-            <span>LOCATION: From</span>
+            <h2><?php echo $from . " - " . $to; ?></h2>
+            <span>LOCATION: From - to</span>
         </div>
         <div class="name">
-            <h2><?php echo $to; ?></h2>
-            <span>LOCATION: To</span>
+            <h2><?php echo substr($time, 0, 9); ?></h2>
+            <span>Date</span>
         </div>
         <div>
             <div class="seat">

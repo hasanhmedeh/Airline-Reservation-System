@@ -43,7 +43,7 @@
                 ?>
                <br>
                <!-- Button trigger modal -->
-               <button <?php if($flights['total_seats'] == 0) echo 'disabled style="cursor: not-allowed"'; ?> type="button" class="btn" data-toggle="modal" data-target="<?php echo "#book" . $flights['flight_id'] ?>">
+               <button <?php if($flights['total_seats'] == 0) echo 'disabled style="cursor: not-allowed" title="No more seats available"'; ?> type="button" class="btn" data-toggle="modal" data-target="<?php echo "#book" . $flights['flight_id'] ?>">
                book now
                </button>
 
