@@ -36,9 +36,9 @@
         </div>
         <div>
             <h4>See your virtual credit card</h4>
-            <div onclick="alert('vs')" style="margin-top: -30px;cursor: pointer; background-image: url(images/card.png); height: 150px; width: 100%; background-size:cover;"></div>
+            <div onclick="" style="margin-top: -30px;cursor: pointer; background-image: url(images/card.png); height: 150px; width: 100%; background-size:cover;"></div>
         </div>
-        <div class="profile-bottom">
+        <div class="profile-bottom" onclick="$('.tableReserve').toggle();">
             <p>view visited countries</p>
             <div class="arrow">
                 <span></span>
@@ -50,7 +50,7 @@
     </div>
 </div>
 
-<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+<div class="container tableReserve" style="margin-top: 50px; margin-bottom: 50px; display: none;">
     <h2 style="color: #1b63ff; font-weight: bold; text-decoration: underline; margin-bottom: 30px;">Your Previous Reservations: </h2>
     <table style="font-size: 1.7em;" class="table table-hover">
         <thead>
