@@ -24,9 +24,9 @@
 
       <div class="box">
          <h3>contact info</h3>
-         <a href="#"> <i class="fas fa-phone"></i> 986757890 </a>
-         <a href="#"> <i class="fas fa-phone"></i> 88743467 </a>
-         <a href="#"> <i class="fas fa-envelope"></i> jj@gmail.com </a>
+         <a href="tel:76986104"> <i class="fas fa-phone"></i> 76 986 104 </a>
+         <a href="tel:76145248"> <i class="fas fa-phone"></i> 76 145 248 </a>
+         <a href="#"> <i class="fas fa-envelope"></i> airLineDB@gmail.com </a>
          <a href="#"> <i class="fas fa-map"></i> lebanon, beirut  </a>
       </div>
 

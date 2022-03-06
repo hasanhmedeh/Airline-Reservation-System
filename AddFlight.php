@@ -1,6 +1,6 @@
 <?php 
       $pageName = "flight_page";
-      $pageTitle = "Edit Flight";
+      $pageTitle = "Add Flight";
       $bootStrapVersion = 6;
     
       require_once 'assets/head.php';
@@ -14,13 +14,17 @@
         $flight_name = $_POST['flight_name'];
         $from_location = $_POST['from_location'];
         $to_location = $_POST['to_location'];
-        $deprature_time = $_POST['deprature_time'];
+        $departure_date= $_POST['departure_date'];
+        $departure_time = $_POST['departure_time'];
+        $arrival_date = $_POST['arrival_date'];
         $arrival_time = $_POST['arrival_time'];
         $total_seats = $_POST['total_seats'];
         $flight_price = $_POST['flight_price'];
         $id = $_SESSION['id'];
+        $departure = $departure_date . " " . $departure_time;
+        $arrival = $arrival_date . " " . $arrival_time;
 
-        $insert = "INSERT into flight values($id,'$flight_name','$from_location','$to_location',CONVERT(DATE, '02-25-2018'), CONVERT(DATE, '03-25-2018'),$total_seats,$flight_price)";
+        $insert = "INSERT into flight values($id,'$flight_name','$from_location','$to_location','$departure', '$arrival',$total_seats,$flight_price)";
         
         odbc_exec($conn,$insert);
         header('Location: AirlineCompany.php');
@@ -77,19 +81,32 @@
              
               <input type="text" name ="flight_price" class="form-control" placeholder="price" required="required">
           </div>
-
+        
           <div class ="row">
             <div class="form-group col-6 my-3">
                 <label >Departure Date</label>
-                <input type="datetime-local" name="deprature_time" class="form-control date"  placeholder="Departure Date" >
+                <input type="date" min="<?php echo date("Y-m-d"); ?>" name="deparure_date" class="form-control date"  placeholder="Departure Date" >
             </div>
 
             <div class="form-group col-6 my-3">
-                <label >Arrival Date</label>
-                <input type="datetime-local" name="arrival_time" class="form-control date" placeholder="Arrival Date">
+                <label >Departure Time</label>
+                <input type="time" min="<?php echo date("H:i:s"); ?>" name="departure_time" class="form-control date" placeholder="Arrival Date">
             </div>
-            
+          </div>
         </div>
+
+        <div class="row">
+          <div class ="row">
+            <div class="form-group col-6 my-3">
+                <label >Arrival Date</label>
+                <input type="date" name="arrival_date" class="form-control date"  placeholder="Departure Date" >
+            </div>
+
+            <div class="form-group col-6 my-3">
+                <label >Arrival time</label>
+                <input type="time" name="arrival_time" class="form-control date" placeholder="Arrival Date">
+            </div>
+          </div>
         </div>
 
         <div class="row">

@@ -30,7 +30,7 @@
             <span>LOCATION: From - to</span>
         </div>
         <div class="name">
-            <h2><?php echo substr($time, 0, 9); ?></h2>
+            <h2><?php echo substr($time, 0, 10); ?></h2>
             <span>Date</span>
         </div>
         <div>

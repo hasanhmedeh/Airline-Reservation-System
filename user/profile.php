@@ -18,6 +18,11 @@
     
     $reservations = odbc_exec($conn, $query);
 
+    $query = "SELECT * FROM creditCard c, passenger p WHERE passenger_username = '". $_SESSION['username'] ."' AND c.credit_number = p.credit_number";
+    
+    $result = odbc_exec($conn, $query);
+    $creditInfo = odbc_fetch_array($result);
+
 ?>
 
 <div class= "cont">
@@ -36,7 +41,7 @@
         </div>
         <div>
             <h4>See your virtual credit card</h4>
-            <div onclick="" style="margin-top: -30px;cursor: pointer; background-image: url(images/card.png); height: 150px; width: 100%; background-size:cover;"></div>
+            <div onclick="$('.creditCard').toggle(); $('.blackBackground').toggle();" style="margin-top: -30px;cursor: pointer; background-image: url(images/card.png); height: 150px; width: 100%; background-size:cover;"></div>
         </div>
         <div class="profile-bottom" onclick="$('.tableReserve').toggle();">
             <p>view visited countries</p>
@@ -49,6 +54,25 @@
         <br>
     </div>
 </div>
+
+
+<div class="creditCard">
+    <div class="title">
+        <h3>VIRTUAL CREDIT CARD</h3>
+    </div>
+    <div class="number">
+        <p><?php echo $creditInfo['credit_number']; ?></p>
+    </div>
+    <div class="CVVEx">
+        <p class="expiry"><span>EXPIRY DATE: </span> <span><?php echo substr($creditInfo['expiry_date'], 0, 7); ?></span></p>
+        <p class="CVV"><span>CVV: </span> <span><?php echo $creditInfo['CVV']; ?></span></p>
+    </div>
+    <div class="nameBalance">
+        <p class="name"><?php echo $creditInfo['passenger_name']; ?></p>
+        <p class="balance"><span>Balance: &nbsp;</span><?php echo $creditInfo['balance']; ?>$</p>
+    </div>
+</div>
+
 
 <div class="container tableReserve" style="margin-top: 50px; margin-bottom: 50px; display: none;">
     <h2 style="color: #1b63ff; font-weight: bold; text-decoration: underline; margin-bottom: 30px;">Your Previous Reservations: </h2>
@@ -77,7 +101,7 @@
 </div>
 
 
-<div class="blackBackground"></div>
+<div onclick="$('.creditCard').toggle(); $('.blackBackground').toggle();" class="blackBackground"></div>
 
 <?php
    require_once 'includes/footer.php';

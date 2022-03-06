@@ -165,14 +165,14 @@
                            
                            <select class="nbSeats_input" name="class" required>
                               <option value="business" selected>Choose your flight Class</option>
-                              <option value="business" >Business Class</option>
-                              <option value="economic" >Economic Class (+150$)</option>
+                              <option value="business" >Economic Class</option>
+                              <option value="economic" >Business Class (+150$)</option>
                               <option value="firstClass" >First Class (+300$)</option>
                            </select>
 
                         </form>
                         <!-- option business or econ -->
-                        <p>Price/ticket: <?php echo $flights['flight_price'] ?>$ </br> (Economic: +150$)</br>(First Class: +300$)</p>
+                        <p>Price/ticket: <?php echo $flights['flight_price'] ?>$ </br> (Business: +150$)</br>(First Class: +300$)</p>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button 

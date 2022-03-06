@@ -48,7 +48,7 @@ label {
     position: fixed;
     right:20px;
     bottom:20px;
-    background-color: rgb(20, 82, 255);
+    background-color: #ef2125;
     outline: purple;
     border:none;
     cursor: pointer;
@@ -68,7 +68,7 @@ label {
     position: fixed;
     left:20px;
     bottom:20px;
-    background-color: rgb(20, 82, 255);
+    background-color: #ef2125;
     outline: purple;
     border:none;
     cursor: pointer;
@@ -88,3 +88,106 @@ label {
     transform: rotate(45deg);
     color: black !important;
 }
+
+.creditCard{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.7);
+    background-color: #ef2125;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 550px;
+    box-shadow: 5px 5px 10px rgb(133, 133, 133);
+    z-index: 1001;
+    display: none;
+ }
+ 
+ .creditCard .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: large;
+    font-family: monospace;
+ }
+ 
+ .creditCard .number p{
+    font-family: monospace;
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    letter-spacing: 10px;
+ }
+ 
+ .creditCard .CVVEx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
+ }
+ 
+ .creditCard .CVVEx p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+ }
+ 
+ .expiry span, .CVV span{
+    color: lightgray;
+ }
+ 
+ .creditCard .nameBalance .name{
+    font-weight: bold;
+    color: lightgrey;
+    font-size: 1.7em;
+    letter-spacing: 3px;
+ }
+ 
+ .creditCard .nameBalance .balance{
+    font-weight: bold;
+    font-family: monospace;
+    color: lightgrey;
+    font-size: 1.7em;
+ }
+ 
+ .creditCard .nameBalance .balance{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 10px 0;
+ }
+ 
+ .blackBackground{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+ }
+
+ .navbar-expand-lg{
+    justify-content: space-between !important;
+ }
+
+ .viewCreditCard{
+    outline: transparent;
+    border: transparent;
+    background-color: #35383d;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+ }

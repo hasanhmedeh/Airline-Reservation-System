@@ -436,6 +436,7 @@ section{
    width: 7rem;
    border-radius: 50%;
    margin-top: 1rem;
+   object-fit:cover;
 }
 
 .cont{
@@ -503,7 +504,13 @@ section{
    margin-bottom: -40px; 
    border-radius: 20px;
    margin-top: -10px;
+   cursor: pointer;
+   transition: all .2s ease-in-out;
 } 
+
+.profile-bottom:hover{
+   background-color: rgb(231, 231, 231);
+}
 
 .profile-bottom img{
    width : 15px;
@@ -991,4 +998,94 @@ h1 span {
    margin: 2.2em 0 0 2.5em;
    text-align: center;
    box-shadow: 1px 0 0 1px #343434, 5px 0 0 1px #343434, 10px 0 0 1px #343434, 11px 0 0 1px #343434, 15px 0 0 1px #343434, 18px 0 0 1px #343434, 22px 0 0 1px #343434, 23px 0 0 1px #343434, 26px 0 0 1px #343434, 30px 0 0 1px #343434, 35px 0 0 1px #343434, 37px 0 0 1px #343434, 41px 0 0 1px #343434, 44px 0 0 1px #343434, 47px 0 0 1px #343434, 51px 0 0 1px #343434, 56px 0 0 1px #343434, 59px 0 0 1px #343434, 64px 0 0 1px #343434, 68px 0 0 1px #343434, 72px 0 0 1px #343434, 74px 0 0 1px #343434, 77px 0 0 1px #343434, 81px 0 0 1px #343434;
+}
+
+.creditCard{
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #2767b1;
+   color: white;
+   padding: 20px;
+   border-radius: 10px;
+   width: 450px;
+   box-shadow: 5px 5px 10px rgb(133, 133, 133);
+   z-index: 1001;
+   display: none;
+}
+
+.creditCard .title{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: center;
+   margin: 0 0 10px 0;
+   font-weight: bold;
+   font-size: large;
+   font-family: monospace;
+}
+
+.creditCard .number p{
+   font-family: monospace;
+   font-size: 2.5em;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin: 10px 0 10px 0;
+   letter-spacing: 10px;
+}
+
+.creditCard .CVVEx{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.7em;
+}
+
+.creditCard .CVVEx p{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   width: 70%;
+}
+
+.expiry span, .CVV span{
+   color: lightgray;
+}
+
+.creditCard .nameBalance .name{
+   font-weight: bold;
+   color: lightgrey;
+   font-size: 1.7em;
+   letter-spacing: 3px;
+}
+
+.creditCard .nameBalance .balance{
+   font-weight: bold;
+   font-family: monospace;
+   color: lightgrey;
+   font-size: 1.7em;
+}
+
+.creditCard .nameBalance .balance{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: center;
+   margin: 0 0 10px 0;
+}
+
+.blackBackground{
+   height: 100vh;
+   width: 100vw;
+   background-color: rgba(0, 0, 0, 0.7);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   display: none;
 }
