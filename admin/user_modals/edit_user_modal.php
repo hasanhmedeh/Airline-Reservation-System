@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['update']))
     {
-        print_r($_POST);
+        // print_r($_POST);
         require_once './../../db_connection/db_connection.php';
         $username = $_POST['username'];
         $name = $_POST['name'];

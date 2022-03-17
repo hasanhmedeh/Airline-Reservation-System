@@ -27,12 +27,15 @@
                 // Get Result
                 $result = odbc_exec($conn,$qry);
                 $current = date("Y-m-d h:i:s");
+
+                $count = 1;
+
                 while ($flight = odbc_fetch_array($result))
                 {
             ?>
 
             <tr>
-                <td><?php echo $flight['flight_id'] ?></td>
+                <td><?php echo $count; $count++; ?></td>
                 <td><?php echo $flight['flight_name'] ?></td>
                 <td><?php echo $flight['airline_name'] ?></td>
                 <td><?php echo $flight['flight_price'] ?></td>

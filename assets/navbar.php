@@ -5,5 +5,5 @@
   ?>
     <button class="viewCreditCard" onclick="$('.creditCard').toggle(); $('.blackBackground').toggle();">VIRTUAL CREDIT CARD</button>
   <?php } ?>
-  
+
 </nav>

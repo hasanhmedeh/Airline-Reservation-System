@@ -85,12 +85,12 @@
           <div class ="row">
             <div class="form-group col-6 my-3">
                 <label >Departure Date</label>
-                <input type="date" min="<?php echo date("Y-m-d"); ?>" name="deparure_date" class="form-control date"  placeholder="Departure Date" >
+                <input type="date" min="<?php echo date("Y-m-d"); ?>" name="departure_date" class="form-control date"  placeholder="Departure Date" >
             </div>
 
             <div class="form-group col-6 my-3">
                 <label >Departure Time</label>
-                <input type="time" min="<?php echo date("H:i:s"); ?>" name="departure_time" class="form-control date" placeholder="Arrival Date">
+                <input type="time" name="departure_time" class="form-control date" placeholder="Arrival Date">
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
           <div class ="row">
             <div class="form-group col-6 my-3">
                 <label >Arrival Date</label>
-                <input type="date" name="arrival_date" class="form-control date"  placeholder="Departure Date" >
+                <input type="date" min="<?php echo date("Y-m-d"); ?>" name="arrival_date" class="form-control date"  placeholder="Departure Date" >
             </div>
 
             <div class="form-group col-6 my-3">

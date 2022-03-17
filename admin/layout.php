@@ -1,4 +1,4 @@
-<div class="admin_layout_container bg-dark text-secondary" style="height: 93vh;">
+<div class="admin_layout_container bg-dark text-secondary" style="min-height: 93vh;">
     <h3 class="admin_layout_title">Panel</h3>
 
     <?php

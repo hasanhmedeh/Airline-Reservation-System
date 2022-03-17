@@ -30,12 +30,12 @@
 
                 // Get Result
                 $result = odbc_exec($conn,$qry);
-                
+                $count=1;
                 while ($company = odbc_fetch_array($result))
                 {
             ?>
             <tr>
-                <td><?php echo $company['airline_id'] ?></td>
+                <td><?php echo $count; $count++?></td>
                 <td><?php echo $company['airline_name'] ?></td>
                 <td><?php echo $company['email'] ?></td>
                 <td><?php echo $company['rate'] ?></td>
@@ -121,7 +121,7 @@
     </div>
 </div>
                     <button data-bs-toggle="modal" data-bs-target="#<?php echo "airline" . $company['airline_id']?>" class="btn btn-primary btn-sm" style="margin-right: 5px;"><i class="fa fa-edit"></i></button>
-                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                    <a href="deleteCompany.php?company_id=<?php echo $company['airline_id']; ?>"><button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></a>
                 </td>
             </tr>
 

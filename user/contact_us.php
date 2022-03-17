@@ -12,7 +12,7 @@
       $message= $_POST['feedbackMessage'];
       $feedback=$flight.$message;
       $user = $_SESSION['username'];
-      $date = date("d-m-Y");
+      $date = date("Y-m-d");
 
       $giveFeedback = "INSERT INTO feedback VALUES ('$user', '$feedback', CONVERT(DATE, '$date'))";
       odbc_exec($conn, $giveFeedback);
