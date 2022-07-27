@@ -30,7 +30,9 @@
         exec createPassenger '$username', '$fullname', '$phone','$email', '$password', $balance, @credit_number out, @CVV out";
 
         $success = odbc_exec($conn,$createUser);
+        echo $success;
         $_SESSION['username'] = $username;
+        $_SESSION['role'] = "client";
         header("Location: user/home.php");
     }
 ?>

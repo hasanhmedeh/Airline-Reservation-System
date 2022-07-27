@@ -104,7 +104,7 @@
 
             <div class="form-group col-6 my-3">
                 <label >Departure Time</label>
-                <input type="time" min="<?php echo date("H:i:s"); ?>" value="<?php echo substr($departure_time,1,5);?>" name="departure_time" class="form-control date" placeholder="Arrival Date">
+                <input type="time" value="<?php echo substr($departure_time,1,5);?>" name="departure_time" class="form-control date" placeholder="Arrival Date">
             </div>
           </div>
 
